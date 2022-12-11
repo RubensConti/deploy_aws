@@ -12,12 +12,12 @@ const app = express()
 app.use(express.json())
 
 //Models
-const User = require('./models/User')
-const { db } = require('./models/User')
-const Gasto = require('./models/Gasto')
-const Entrada = require('./models/Entrada')
-const Meta = require('./models/Meta')
-const Divida = require('./models/Divida')
+const User = require(__dirname +'/Models/User.js')
+const { db } = require(__dirname +'/Models/User.js')
+const Gasto = require(__dirname +'/Models/Gasto')
+const Entrada = require(__dirname +'/Models/Entrada')
+const Meta = require(__dirname +'/Models/Meta')
+const Divida = require(__dirname +'/Models/Divida')
 app.engine('html', require('ejs').renderFile);
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false}))
